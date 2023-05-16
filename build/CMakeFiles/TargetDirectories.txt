@@ -1,0 +1,3 @@
+/home/parallels/video/muduo/build/CMakeFiles/mymuduo.dir
+/home/parallels/video/muduo/build/CMakeFiles/edit_cache.dir
+/home/parallels/video/muduo/build/CMakeFiles/rebuild_cache.dir
