@@ -1,6 +1,6 @@
 #include "Thread.h"
 
-std::atomic<int> Thread::numCreated_ = 0;
+std::atomic<int> Thread::numCreated_(0);
 
 Thread::Thread(ThreadFunc func, const std::string& name) : 
     started_(false), 

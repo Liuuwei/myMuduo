@@ -1,17 +1,8 @@
 #include <iostream>
-
-union A {
-    int a;
-    int *ptr;
-};
-
+#include <atomic>
 
 int main() {
-    A un;
-    int val = 3;
-    int *p = new int(4);
-    un.a = 3;
-    un.ptr = p;
-    std::cout << *un.ptr << std::endl;
-    delete p;
+    std::atomic<int> a;
+    a = 3;
+    std::cout << 3 << std::endl;
 }

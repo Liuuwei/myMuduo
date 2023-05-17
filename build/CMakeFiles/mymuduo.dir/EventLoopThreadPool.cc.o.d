@@ -1,8 +1,8 @@
-CMakeFiles/mymuduo.dir/TcpServer.cc.o: \
- /home/parallels/video/muduo/TcpServer.cc /usr/include/stdc-predef.h \
- /home/parallels/video/muduo/TcpServer.h \
- /home/parallels/video/muduo/noncopyable.h \
+CMakeFiles/mymuduo.dir/EventLoopThreadPool.cc.o: \
+ /home/parallels/video/muduo/EventLoopThreadPool.cc \
+ /usr/include/stdc-predef.h \
  /home/parallels/video/muduo/EventLoopThreadPool.h \
+ /home/parallels/video/muduo/noncopyable.h \
  /home/parallels/video/muduo/EventLoopThread.h \
  /home/parallels/video/muduo/EventLoop.h \
  /home/parallels/video/muduo/CurrentThread.h \
@@ -214,23 +214,4 @@ CMakeFiles/mymuduo.dir/TcpServer.cc.o: \
  /usr/include/aarch64-linux-gnu/bits/semaphore.h \
  /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \
  /usr/include/c++/11/bits/this_thread_sleep.h \
- /usr/include/c++/11/condition_variable \
- /home/parallels/video/muduo/InetAddress.h \
- /home/parallels/video/muduo/copyable.h /usr/include/arpa/inet.h \
- /usr/include/netinet/in.h /usr/include/aarch64-linux-gnu/sys/socket.h \
- /usr/include/aarch64-linux-gnu/bits/types/struct_iovec.h \
- /usr/include/aarch64-linux-gnu/bits/socket.h \
- /usr/include/aarch64-linux-gnu/bits/socket_type.h \
- /usr/include/aarch64-linux-gnu/bits/sockaddr.h \
- /usr/include/aarch64-linux-gnu/asm/socket.h \
- /usr/include/asm-generic/socket.h /usr/include/linux/posix_types.h \
- /usr/include/linux/stddef.h \
- /usr/include/aarch64-linux-gnu/asm/posix_types.h \
- /usr/include/asm-generic/posix_types.h \
- /usr/include/aarch64-linux-gnu/asm/sockios.h \
- /usr/include/asm-generic/sockios.h \
- /usr/include/aarch64-linux-gnu/bits/types/struct_osockaddr.h \
- /usr/include/aarch64-linux-gnu/bits/in.h \
- /home/parallels/video/muduo/Callbacks.h \
- /home/parallels/video/muduo/Acceptor.h \
- /home/parallels/video/muduo/Socket.h
+ /usr/include/c++/11/condition_variable
