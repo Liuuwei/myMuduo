@@ -33,5 +33,4 @@ class EventLoopThreadPool {
         int next_;
         std::vector<std::unique_ptr<EventLoopThread>> threads_;
         std::vector<EventLoop *> loops_;
-
 };

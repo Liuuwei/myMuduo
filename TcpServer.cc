@@ -42,7 +42,9 @@ void TcpServer::setThreadNum(int numThreads) {
 
 void TcpServer::start() {
     if (started_ ++ == 0) { // * prevent start many times
+        printf("in");
         threadPool_->start(threadInitCallback_);
+        printf("runinloopp");
         loop_->runInLoop(std::bind(&Acceptor::listen, acceptor_.get()));
         loop_->loop();
     }

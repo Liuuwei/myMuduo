@@ -6,6 +6,7 @@
 #include "EventLoop.h"
 #include "Callbacks.h"
 #include "Acceptor.h"
+#include "Buffer.h"
 
 #include <unordered_map>
 #include <functional>
@@ -49,8 +50,8 @@ class TcpServer : noncopyable{
         MessageCallback messageCallback_;
         WriteCompleteCallback writeCompleteCallback_;
         ThreadInitCallback threadInitCallback_;
-        std::atomic<int> started_;
-
+        //std::atomic_int started_;
+        int started_ = 0;
         int nextConnId_;
         ConnectionMap connections_;
 };

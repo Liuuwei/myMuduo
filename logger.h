@@ -8,7 +8,7 @@
 
 #define LOG_INFO(logmsgFormat, ...) \
     do{ \
-        Logger &logger = Logger::instance(); \
+        logger &logger = logger::instance(); \
         logger.setLogLevel(INFO); \
         char buf[1024] = {0}; \
         snprintf(buf, 1024, logmsgFormat, ##__VA_ARGS__); \
@@ -17,7 +17,7 @@
 
 #define LOG_ERROR(logmsgFormat, ...) \
     do{ \
-        Logger &logger = Logger::instance(); \
+        logger &logger = logger::instance(); \
         logger.setLogLevel(ERROR); \
         char buf[1024] = {0}; \
         snprintf(buf, 1024, logmsgFormat, ##__VA_ARGS__); \
@@ -26,7 +26,7 @@
 
 #define LOG_FATAL(logmsgFormat, ...) \
     do{ \
-        Logger &logger = Logger::instance(); \
+        logger &logger = logger::instance(); \
         logger.setLogLevel(FATAL); \
         char buf[1024] = {0}; \
         snprintf(buf, 1024, logmsgFormat, ##__VA_ARGS__); \
@@ -36,7 +36,7 @@
 #ifdef MUDUO_DEBUG
 #define LOG_DEBUG(logmsgFormat, ...) \
     do{ \
-        Logger &logger = Logger::instance(); \
+        logger &logger = logger::instance(); \
         logger.setLogLevel(DEBUG); \
         char buf[1024] = {0}; \
         snprintf(buf, 1024, logmsgFormat, ##__VA_ARGS__); \
@@ -54,12 +54,13 @@ enum LogLevel {
     DEBUG, 
 };
 
-class Logger : noncopyable {
+class logger : noncopyable {
     public:
-        static Logger &instance();
+        logger() {}
+        ~logger() {}
+        static logger &instance();
         void setLogLevel(int Level);
         void log(std::string msg);
     private:
         int logLevel_;
-        Logger();
 };

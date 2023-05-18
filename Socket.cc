@@ -13,8 +13,8 @@ Socket::~Socket() {
 }
 
 void Socket::bindAddress(const InetAddress &localAddr) {
-    if (::bind(sockfd_, (sockaddr *)localAddr.getSockaddr(), sizeof(sockaddr_in) < 0)) {
-        LOG_FATAL("bind sockfd: %d fail\n", sockfd_);
+    if (::bind(sockfd_, (sockaddr *)localAddr.getSockaddr(), sizeof(sockaddr_in)) < 0) {
+        LOG_FATAL("%s:%s:%d bind sockfd: %d fail\n", __FILE__, __FUNCTION__, __LINE__, sockfd_);
     }
 }
 void Socket::listen() {
@@ -25,7 +25,7 @@ void Socket::listen() {
 
 int Socket::accept(InetAddress &peeraddr){
     sockaddr_in addr;
-    socklen_t len;
+    socklen_t len = sizeof(addr);
     bzero(&addr, sizeof(addr));
     int connfd;
     if ( (connfd = ::accept(sockfd_, (sockaddr *)&addr, &len)) >= 0) {

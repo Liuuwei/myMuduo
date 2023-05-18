@@ -31,20 +31,23 @@ Acceptor::~Acceptor() {
 }
 
 void Acceptor::listen() {
+    printf("listen\n");
     listenning_ = true;
     acceptSocket_.listen();
     acceptChannel_.enableReading(); // * 调用之后loop会调用poller去更新channel，并且如果没添加该fd的监听事件则会添加
 }
 
 void Acceptor::handleRead() {
+    printf("handlread\n");
     InetAddress peerAddr;
     int connfd = acceptSocket_.accept(peerAddr);
     if (connfd > 0) {
         if (newConnectionCallback_) {
+            printf("new\n");
             newConnectionCallback_(connfd, peerAddr);
-        } else {
-            LOG_ERROR("%s:%s:%d accept error: %d\n", __FILE__, __FUNCTION__, __LINE__, errno);
-            ::close(connfd);
         }
+    } else {
+        LOG_ERROR("%s:%s:%d accept error: %d\n", __FILE__, __FUNCTION__, __LINE__, errno);
+        ::close(connfd);
     }
 }

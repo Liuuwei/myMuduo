@@ -1,15 +1,15 @@
 #include "logger.h"
 
-Logger& Logger::instance() {
-    static Logger logger;
+logger& logger::instance() {
+    static logger logger;
     return logger;
 }
 
-void Logger::setLogLevel(int level) {
+void logger::setLogLevel(int level) {
     logLevel_ = level;
 }
 
-void Logger::log(std::string msg) {
+void logger::log(std::string msg) {
     switch (logLevel_) {
         case INFO:
             std::cout << "[INFO]";
@@ -24,5 +24,5 @@ void Logger::log(std::string msg) {
             std::cout << "[DEBUF]";
             break;       
     }
-    std::cout << Timestamp::now().toString() << msg << std::endl;
+    std::cout << Timestamp::now().toString() << msg << " " << std::endl;
 }
