@@ -26,7 +26,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/parallels/video/muduo/Thread.cc" "CMakeFiles/mymuduo.dir/Thread.cc.o" "gcc" "CMakeFiles/mymuduo.dir/Thread.cc.o.d"
   "/home/parallels/video/muduo/Timestamp.cc" "CMakeFiles/mymuduo.dir/Timestamp.cc.o" "gcc" "CMakeFiles/mymuduo.dir/Timestamp.cc.o.d"
   "/home/parallels/video/muduo/logger.cc" "CMakeFiles/mymuduo.dir/logger.cc.o" "gcc" "CMakeFiles/mymuduo.dir/logger.cc.o.d"
-  "/home/parallels/video/muduo/tmp.cc" "CMakeFiles/mymuduo.dir/tmp.cc.o" "gcc" "CMakeFiles/mymuduo.dir/tmp.cc.o.d"
   )
 
 # Targets to which this target links.

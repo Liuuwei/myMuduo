@@ -9,4 +9,4 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
 #定义参与编译的源文件
 aux_source_directory(. SRC_LIST)
 
-add_library(mymuduo ${SRC_LIST})
+add_library(mymuduo SHARED ${SRC_LIST})

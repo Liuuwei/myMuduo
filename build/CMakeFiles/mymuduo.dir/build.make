@@ -321,20 +321,6 @@ CMakeFiles/mymuduo.dir/logger.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mymuduo.dir/logger.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/parallels/video/muduo/logger.cc -o CMakeFiles/mymuduo.dir/logger.cc.s
 
-CMakeFiles/mymuduo.dir/tmp.cc.o: CMakeFiles/mymuduo.dir/flags.make
-CMakeFiles/mymuduo.dir/tmp.cc.o: ../tmp.cc
-CMakeFiles/mymuduo.dir/tmp.cc.o: CMakeFiles/mymuduo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/parallels/video/muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/mymuduo.dir/tmp.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mymuduo.dir/tmp.cc.o -MF CMakeFiles/mymuduo.dir/tmp.cc.o.d -o CMakeFiles/mymuduo.dir/tmp.cc.o -c /home/parallels/video/muduo/tmp.cc
-
-CMakeFiles/mymuduo.dir/tmp.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mymuduo.dir/tmp.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/parallels/video/muduo/tmp.cc > CMakeFiles/mymuduo.dir/tmp.cc.i
-
-CMakeFiles/mymuduo.dir/tmp.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mymuduo.dir/tmp.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/parallels/video/muduo/tmp.cc -o CMakeFiles/mymuduo.dir/tmp.cc.s
-
 # Object files for target mymuduo
 mymuduo_OBJECTS = \
 "CMakeFiles/mymuduo.dir/Acceptor.cc.o" \
@@ -354,39 +340,36 @@ mymuduo_OBJECTS = \
 "CMakeFiles/mymuduo.dir/TcpServer.cc.o" \
 "CMakeFiles/mymuduo.dir/Thread.cc.o" \
 "CMakeFiles/mymuduo.dir/Timestamp.cc.o" \
-"CMakeFiles/mymuduo.dir/logger.cc.o" \
-"CMakeFiles/mymuduo.dir/tmp.cc.o"
+"CMakeFiles/mymuduo.dir/logger.cc.o"
 
 # External object files for target mymuduo
 mymuduo_EXTERNAL_OBJECTS =
 
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/Acceptor.cc.o
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/Buffer.cc.o
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/Callbacks.cc.o
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/Channel.cc.o
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/CurrentThread.cc.o
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/DefaultPoller.cc.o
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/EPollPoller.cc.o
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/EventLoop.cc.o
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/EventLoopThread.cc.o
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/EventLoopThreadPool.cc.o
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/InetAddress.cc.o
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/Poller.cc.o
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/Socket.cc.o
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/TcpConnection.cc.o
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/TcpServer.cc.o
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/Thread.cc.o
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/Timestamp.cc.o
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/logger.cc.o
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/tmp.cc.o
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/build.make
-../lib/libmymuduo.a: CMakeFiles/mymuduo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/parallels/video/muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX static library ../lib/libmymuduo.a"
-	$(CMAKE_COMMAND) -P CMakeFiles/mymuduo.dir/cmake_clean_target.cmake
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/Acceptor.cc.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/Buffer.cc.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/Callbacks.cc.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/Channel.cc.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/CurrentThread.cc.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/DefaultPoller.cc.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/EPollPoller.cc.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/EventLoop.cc.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/EventLoopThread.cc.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/EventLoopThreadPool.cc.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/InetAddress.cc.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/Poller.cc.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/Socket.cc.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/TcpConnection.cc.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/TcpServer.cc.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/Thread.cc.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/Timestamp.cc.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/logger.cc.o
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/build.make
+../lib/libmymuduo.so: CMakeFiles/mymuduo.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/parallels/video/muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX shared library ../lib/libmymuduo.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mymuduo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/mymuduo.dir/build: ../lib/libmymuduo.a
+CMakeFiles/mymuduo.dir/build: ../lib/libmymuduo.so
 .PHONY : CMakeFiles/mymuduo.dir/build
 
 CMakeFiles/mymuduo.dir/clean:

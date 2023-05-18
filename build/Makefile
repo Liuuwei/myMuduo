@@ -561,30 +561,6 @@ logger.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/logger.cc.s
 .PHONY : logger.cc.s
 
-tmp.o: tmp.cc.o
-.PHONY : tmp.o
-
-# target to build an object file
-tmp.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/tmp.cc.o
-.PHONY : tmp.cc.o
-
-tmp.i: tmp.cc.i
-.PHONY : tmp.i
-
-# target to preprocess a source file
-tmp.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/tmp.cc.i
-.PHONY : tmp.cc.i
-
-tmp.s: tmp.cc.s
-.PHONY : tmp.s
-
-# target to generate assembly for a file
-tmp.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/tmp.cc.s
-.PHONY : tmp.cc.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -648,9 +624,6 @@ help:
 	@echo "... logger.o"
 	@echo "... logger.i"
 	@echo "... logger.s"
-	@echo "... tmp.o"
-	@echo "... tmp.i"
-	@echo "... tmp.s"
 .PHONY : help
 
 

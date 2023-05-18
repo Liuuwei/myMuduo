@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../lib/libmymuduo.a"
   "../lib/libmymuduo.pdb"
+  "../lib/libmymuduo.so"
   "CMakeFiles/mymuduo.dir/Acceptor.cc.o"
   "CMakeFiles/mymuduo.dir/Acceptor.cc.o.d"
   "CMakeFiles/mymuduo.dir/Buffer.cc.o"
@@ -37,8 +37,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/mymuduo.dir/Timestamp.cc.o.d"
   "CMakeFiles/mymuduo.dir/logger.cc.o"
   "CMakeFiles/mymuduo.dir/logger.cc.o.d"
-  "CMakeFiles/mymuduo.dir/tmp.cc.o"
-  "CMakeFiles/mymuduo.dir/tmp.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.
