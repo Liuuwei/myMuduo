@@ -38,7 +38,7 @@ class TcpServer : noncopyable{
         void removeConnection(const TcpConnectionPtr &conn);
         void removeConnectionInLoop(const TcpConnectionPtr &conn);
 
-        using ConnectionMap = std::unordered_map<int, TcpConnectionPtr>;
+        using ConnectionMap = std::unordered_map<std::string, TcpConnectionPtr>;
 
         EventLoop *loop_; // * baseloop
         const std::string ipPort_;

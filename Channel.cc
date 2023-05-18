@@ -20,7 +20,7 @@ Channel::Channel(EventLoop* loop, int fd)
 Channel::~Channel() {
 
 }
-// ? 何时调用
+// ? 何时调用, bind TcpConnection 避免TcpConnection被销毁之后channel还执行回调
 void Channel::tie(const std::shared_ptr<void> &obj) { 
     tie_ = obj;
     tied_ = true;

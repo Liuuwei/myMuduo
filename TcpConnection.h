@@ -37,11 +37,11 @@ class TcpConnection : noncopyable, public std::enable_shared_from_this<TcpConnec
         void shutdown();
         void shutdownInLoop();
 
-        void setConnectionCallback(ConnectionCallback &cb) { connectionCallback_ = cb; }
-        void setMessageCallback(MessageCallback &cb) { messageCallback_ = cb; }
-        void setWriteCompleteCallback(WriteCompleteCallback &cb) { writeCompleteCallback_ = cb; }
-        void setCloseCallback(CloseCallback &cb) { closeCallback_ = cb; }
-        void setHighWaterMarkCallback(HighWaterMarkCallback &cb) { highWaterMarkCallback_ = cb; }
+        void setConnectionCallback(const ConnectionCallback &cb) { connectionCallback_ = cb; }
+        void setMessageCallback(const MessageCallback &cb) { messageCallback_ = cb; }
+        void setWriteCompleteCallback(const WriteCompleteCallback &cb) { writeCompleteCallback_ = cb; }
+        void setCloseCallback(const CloseCallback &cb) { closeCallback_ = cb; }
+        void setHighWaterMarkCallback(const HighWaterMarkCallback &cb) { highWaterMarkCallback_ = cb; }
 
         void connectEstablised();
         void connectDestroyed();
@@ -51,10 +51,9 @@ class TcpConnection : noncopyable, public std::enable_shared_from_this<TcpConnec
         void handleClose();
         void handleError();
 
-
     private:
         enum StateE { kDisconnected, kConnecting, kConnected, kDisconnecting };
-        void setState(StateE state);
+        void setState(StateE state) { state_ = state; }
         EventLoop *loop_; // * subloop, manage client communication
         const std::string name_;
         std::atomic<int> state_;

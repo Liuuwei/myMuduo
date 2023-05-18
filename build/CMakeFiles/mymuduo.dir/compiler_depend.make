@@ -3242,7 +3242,11 @@ CMakeFiles/mymuduo.dir/TcpServer.cc.o: ../TcpServer.cc \
   /usr/include/aarch64-linux-gnu/bits/in.h \
   ../Callbacks.h \
   ../Acceptor.h \
-  ../Socket.h
+  ../Socket.h \
+  ../TcpConnection.h \
+  ../Buffer.h \
+  /usr/include/c++/11/algorithm \
+  /usr/include/c++/11/pstl/glue_algorithm_defs.h
 
 CMakeFiles/mymuduo.dir/Thread.cc.o: ../Thread.cc \
   /usr/include/stdc-predef.h \

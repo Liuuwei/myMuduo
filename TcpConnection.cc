@@ -37,6 +37,36 @@ TcpConnection::~TcpConnection() {
     LOG_INFO("TcpConnection::dtor[%s] at fd=%d state=%d\n", name_.c_str(), channel_->fd(), (int)state_);
 }
 
+void TcpConnection::connectEstablised() {
+    setState(kConnected);
+    channel_->tie(shared_from_this());
+    channel_->enableReading(); // * 向poller注册
+    
+    connectionCallback_(shared_from_this());
+}
+
+void TcpConnection::connectDestroyed() {
+    if (state_ == kConnected) {
+        setState(kDisconnected);
+        channel_->disableAll(); // * 从poller中删除
+        connectionCallback_(shared_from_this());
+    }
+    channel_->remove(); // * 从loop中删除
+}
+
+void TcpConnection::shutdown() {
+    if (state_ == kConnected) {
+        setState(kDisconnecting);
+        loop_->runInLoop(std::bind(&TcpConnection::shutdownInLoop, this));
+    }
+}
+
+void TcpConnection::shutdownInLoop() {
+    if (channel_->isWriteing()) {
+        channel_->disableWriteing();
+    }
+}
+
 void TcpConnection::handleRead(Timestamp receiveTime) {
     int savedErrno = 0;
     ssize_t n = inputBuffer_.readFd(channel_->fd(), &savedErrno);
@@ -62,7 +92,7 @@ void TcpConnection::handleWrite() {
                 if (writeCompleteCallback_) {
                     loop_->queueInLoop(std::bind(writeCompleteCallback_, shared_from_this()));
                 }
-                if (state_ == kDisconnecting) {
+                if (state_ == kDisconnecting) { // * 发送过程中某处调用了shutdown，将state_置为kDisconnecting，等待此时写完再调用
                     shutdownInLoop();
                 }
             }

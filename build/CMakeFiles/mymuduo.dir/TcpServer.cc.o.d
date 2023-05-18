@@ -233,4 +233,7 @@ CMakeFiles/mymuduo.dir/TcpServer.cc.o: \
  /usr/include/aarch64-linux-gnu/bits/in.h \
  /home/parallels/video/muduo/Callbacks.h \
  /home/parallels/video/muduo/Acceptor.h \
- /home/parallels/video/muduo/Socket.h
+ /home/parallels/video/muduo/Socket.h \
+ /home/parallels/video/muduo/TcpConnection.h \
+ /home/parallels/video/muduo/Buffer.h /usr/include/c++/11/algorithm \
+ /usr/include/c++/11/pstl/glue_algorithm_defs.h
